@@ -3,175 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practise</title>
+  <title>Contact Us</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: url("bg5.jpg") no-repeat center center/cover;
-      background-attachment: fixed;
-      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    nav {
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 90%;
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-section {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .form-section h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .form-section input, 
+    .form-section textarea {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 16px;
+      outline: none;
     }
 
-    nav h1 {
-      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    .form-section input::placeholder, 
+    .form-section textarea::placeholder {
+      color: #ddd;
+    }
+
+    .form-section button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #000;
       font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
+    .form-section button:hover {
+      background: #ff9800;
+      color: #fff;
     }
 
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: clamp(0.9rem, 1vw, 1.1rem);
-      font-weight: 600;
-      transition: color 0.3s ease;
+    .image-section {
+      flex: 1;
+      background: url("WhatsApp\ Image\ 2025-07-19\ at\ 08.29.12.jpeg") no-repeat center center/cover;
     }
 
-    nav ul li a:hover {
-      color: #ddd;
-    }
-
-    .intro {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 100px 10%;
-      gap: 50px;
-    }
-
-    .aboutme h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      font-family: "Trebuchet MS", sans-serif;
-    }
-
-    .aboutme p {
-      font-size: 1.2rem;
-      font-weight: 400;
-      max-width: 400px;
-      line-height: 1.6;
-    }
-
-    .hero {
-      height: 300px;
-      width: 300px;
-      background: url("WhatsApp Image 2025-07-19 at 08.29.12.jpeg") center/cover no-repeat;
-      border-radius: 25px;
-      flex-shrink: 0;
-    }
-
-    footer {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    footer p {
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    footer ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    footer ul li a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer ul li a:hover {
-      color: #ddd;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .intro {
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
-        text-align: center;
       }
-      .hero {
-        width: 250px;
+      .image-section {
         height: 250px;
-        margin-top: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-      .intro {
-        padding: 60px 5%;
-      }
-      .aboutme h1 {
-        font-size: 2rem;
-      }
-      .aboutme p {
-        font-size: 1rem;
-      }
-      footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <h1>Mhanth</h1>
-    <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="intro">
-    <div class="aboutme">
-      <h1>I am Sarvesh Tripathi</h1>
-      <p>MERN Stack Developer passionate about building scalable apps and modern web solutions.</p>
+  <div class="container">
+    <div class="form-section">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-    <div class="hero"></div>
+    <div class="image-section"></div>
   </div>
-
-  <footer>
-    <p>All Rights Reserved © Mr. Mhanth</p>
-    <ul>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="mailto:yourmail@gmail.com">E-mail</a></li>
-    </ul>
-  </footer>
-
 </body>
 </html>
