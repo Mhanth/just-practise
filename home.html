@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practise</title>
+  <style>
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url("bg5.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    nav h1 {
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: clamp(0.9rem, 1vw, 1.1rem);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ddd;
+    }
+
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 10%;
+      gap: 50px;
+    }
+
+    .aboutme h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    .aboutme p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      max-width: 400px;
+      line-height: 1.6;
+    }
+
+    .hero {
+      height: 300px;
+      width: 300px;
+      background: url("WhatsApp Image 2025-07-19 at 08.29.12.jpeg") center/cover no-repeat;
+      border-radius: 25px;
+      flex-shrink: 0;
+    }
+
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    footer ul li a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: #ddd;
+    }
+
+ 
+    @media (max-width: 992px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero {
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .intro {
+        padding: 60px 5%;
+      }
+      .aboutme h1 {
+        font-size: 2rem;
+      }
+      .aboutme p {
+        font-size: 1rem;
+      }
+      footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <h1>Mhanth</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home.html">About</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="intro">
+    <div class="aboutme">
+      <h1>I am Sarvesh Tripathi</h1>
+      <p>MERN Stack Developer passionate about building scalable apps and modern web solutions.</p>
+    </div>
+    <div class="hero"></div>
+  </div>
+
+  <footer>
+    <p>All Rights Reserved © Mr. Mhanth</p>
+    <ul>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="mailto:yourmail@gmail.com">E-mail</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
